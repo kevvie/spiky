@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace spiky
 {
-    public partial class Form1 : Form
+    public partial class spikyStartUp : Form
     {
-        public Form1()
+        public spikyStartUp()
         {
             InitializeComponent();
+        }
+
+        private void multiPlayerButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
