@@ -63,5 +63,10 @@ namespace spiky
         {
                 new characterWindow().ShowDialog();
         }
+
+        private void spikyStartUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
