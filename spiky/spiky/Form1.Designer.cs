@@ -34,6 +34,7 @@
             this.muteButton = new System.Windows.Forms.Button();
             this.characterButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
@@ -128,12 +129,27 @@
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Font = new System.Drawing.Font("Bombing", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(325, 569);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(150, 50);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            // 
             // spikyStartUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(781, 753);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.characterButton);
             this.Controls.Add(this.muteButton);
@@ -157,6 +173,7 @@
         private System.Windows.Forms.Button muteButton;
         private System.Windows.Forms.Button characterButton;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 

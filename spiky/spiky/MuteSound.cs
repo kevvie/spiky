@@ -18,7 +18,7 @@ namespace spiky
      public MuteSound()
       {
          // Calculate the volume that's being set
-         int NewVolume = (0);
+         int NewVolume = ((ushort.MaxValue /10) * 0);
          // Set the same volume for both the left and the right channels
          uint NewVolumeAllChannels = (((uint)NewVolume & 0x0000ffff) | ((uint)NewVolume << 16));
          // Set the volume
