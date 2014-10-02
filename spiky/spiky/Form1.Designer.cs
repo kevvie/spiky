@@ -32,7 +32,7 @@
             this.multiPlayerButton = new System.Windows.Forms.Button();
             this.highScoreButton = new System.Windows.Forms.Button();
             this.muteButton = new System.Windows.Forms.Button();
-            this.changeCharacterButton = new System.Windows.Forms.Button();
+            this.characterButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -98,20 +98,20 @@
             this.muteButton.Text = "Mute";
             this.muteButton.UseVisualStyleBackColor = true;
             // 
-            // changeCharacterButton
+            // characterButton
             // 
-            this.changeCharacterButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.changeCharacterButton.FlatAppearance.BorderSize = 0;
-            this.changeCharacterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeCharacterButton.Font = new System.Drawing.Font("Bombing", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeCharacterButton.ForeColor = System.Drawing.Color.Red;
-            this.changeCharacterButton.Location = new System.Drawing.Point(500, 500);
-            this.changeCharacterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.changeCharacterButton.Name = "changeCharacterButton";
-            this.changeCharacterButton.Size = new System.Drawing.Size(149, 50);
-            this.changeCharacterButton.TabIndex = 4;
-            this.changeCharacterButton.Text = "Change Character";
-            this.changeCharacterButton.UseVisualStyleBackColor = true;
+            this.characterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.characterButton.FlatAppearance.BorderSize = 0;
+            this.characterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.characterButton.Font = new System.Drawing.Font("Bombing", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterButton.ForeColor = System.Drawing.Color.Red;
+            this.characterButton.Location = new System.Drawing.Point(500, 500);
+            this.characterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.characterButton.Name = "characterButton";
+            this.characterButton.Size = new System.Drawing.Size(150, 50);
+            this.characterButton.TabIndex = 4;
+            this.characterButton.Text = "Character";
+            this.characterButton.UseVisualStyleBackColor = true;
             // 
             // loginButton
             // 
@@ -134,7 +134,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(781, 753);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.changeCharacterButton);
+            this.Controls.Add(this.characterButton);
             this.Controls.Add(this.muteButton);
             this.Controls.Add(this.highScoreButton);
             this.Controls.Add(this.multiPlayerButton);
@@ -154,7 +154,7 @@
         private System.Windows.Forms.Button multiPlayerButton;
         private System.Windows.Forms.Button highScoreButton;
         private System.Windows.Forms.Button muteButton;
-        private System.Windows.Forms.Button changeCharacterButton;
+        private System.Windows.Forms.Button characterButton;
         private System.Windows.Forms.Button loginButton;
     }
 }
