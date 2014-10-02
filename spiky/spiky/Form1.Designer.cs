@@ -44,10 +44,10 @@
             this.startButton.FlatAppearance.BorderSize = 0;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Bombing", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startButton.Location = new System.Drawing.Point(325, 325);
-            this.startButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.startButton.Location = new System.Drawing.Point(244, 264);
+            this.startButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(149, 150);
+            this.startButton.Size = new System.Drawing.Size(112, 122);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Press to start";
             this.startButton.UseVisualStyleBackColor = false;
@@ -60,10 +60,10 @@
             this.multiPlayerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.multiPlayerButton.Font = new System.Drawing.Font("Bombing", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiPlayerButton.ForeColor = System.Drawing.Color.Red;
-            this.multiPlayerButton.Location = new System.Drawing.Point(137, 250);
-            this.multiPlayerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.multiPlayerButton.Location = new System.Drawing.Point(103, 203);
+            this.multiPlayerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.multiPlayerButton.Name = "multiPlayerButton";
-            this.multiPlayerButton.Size = new System.Drawing.Size(161, 50);
+            this.multiPlayerButton.Size = new System.Drawing.Size(121, 41);
             this.multiPlayerButton.TabIndex = 1;
             this.multiPlayerButton.Text = "MultiPlayer";
             this.multiPlayerButton.UseVisualStyleBackColor = true;
@@ -76,10 +76,10 @@
             this.highScoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.highScoreButton.Font = new System.Drawing.Font("Bombing", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highScoreButton.ForeColor = System.Drawing.Color.Red;
-            this.highScoreButton.Location = new System.Drawing.Point(500, 250);
-            this.highScoreButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.highScoreButton.Location = new System.Drawing.Point(375, 203);
+            this.highScoreButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.highScoreButton.Name = "highScoreButton";
-            this.highScoreButton.Size = new System.Drawing.Size(149, 50);
+            this.highScoreButton.Size = new System.Drawing.Size(112, 41);
             this.highScoreButton.TabIndex = 2;
             this.highScoreButton.Text = "HighScore";
             this.highScoreButton.UseVisualStyleBackColor = true;
@@ -91,10 +91,10 @@
             this.muteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.muteButton.Font = new System.Drawing.Font("Bombing", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.muteButton.ForeColor = System.Drawing.Color.Red;
-            this.muteButton.Location = new System.Drawing.Point(149, 500);
-            this.muteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.muteButton.Location = new System.Drawing.Point(112, 406);
+            this.muteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.muteButton.Name = "muteButton";
-            this.muteButton.Size = new System.Drawing.Size(149, 50);
+            this.muteButton.Size = new System.Drawing.Size(112, 41);
             this.muteButton.TabIndex = 3;
             this.muteButton.Text = "Mute";
             this.muteButton.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@
             this.characterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.characterButton.Font = new System.Drawing.Font("Bombing", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.characterButton.ForeColor = System.Drawing.Color.Red;
-            this.characterButton.Location = new System.Drawing.Point(500, 500);
-            this.characterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.characterButton.Location = new System.Drawing.Point(375, 406);
+            this.characterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.characterButton.Name = "characterButton";
-            this.characterButton.Size = new System.Drawing.Size(150, 50);
+            this.characterButton.Size = new System.Drawing.Size(112, 41);
             this.characterButton.TabIndex = 4;
             this.characterButton.Text = "Character";
             this.characterButton.UseVisualStyleBackColor = true;
@@ -122,9 +122,10 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Bombing", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.Red;
-            this.loginButton.Location = new System.Drawing.Point(325, 171);
+            this.loginButton.Location = new System.Drawing.Point(244, 139);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(150, 50);
+            this.loginButton.Size = new System.Drawing.Size(112, 41);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -136,19 +137,21 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Bombing", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
-            this.exitButton.Location = new System.Drawing.Point(325, 569);
+            this.exitButton.Location = new System.Drawing.Point(244, 462);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(150, 50);
+            this.exitButton.Size = new System.Drawing.Size(112, 41);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // spikyStartUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(781, 753);
+            this.ClientSize = new System.Drawing.Size(586, 612);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.characterButton);
@@ -158,7 +161,7 @@
             this.Controls.Add(this.startButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "spikyStartUp";
             this.Text = "Spiky the Game";
             this.ResumeLayout(false);
