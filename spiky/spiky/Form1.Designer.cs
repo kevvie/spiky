@@ -97,6 +97,7 @@
             this.muteButton.TabIndex = 3;
             this.muteButton.Text = "Mute";
             this.muteButton.UseVisualStyleBackColor = true;
+            this.muteButton.Click += new System.EventHandler(this.muteButton_Click_1);
             // 
             // characterButton
             // 

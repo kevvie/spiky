@@ -26,5 +26,10 @@ namespace spiky
         {
 
         }
+        
+        private void muteButton_Click_1(object sender, EventArgs e)
+        {
+            new MuteSound();
+        }
     }
 }
