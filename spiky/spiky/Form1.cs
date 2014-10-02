@@ -48,5 +48,20 @@ namespace spiky
 
             Application.Exit();
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void highScoreButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void characterButton_Click(object sender, EventArgs e)
+        {
+                new characterWindow().ShowDialog();
+        }
     }
 }
