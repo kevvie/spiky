@@ -40,6 +40,7 @@ namespace spiky
 
         private void colorButton_Click(object sender, EventArgs e)
         {
+                this.Hide();
                 new ColorWindow().ShowDialog();
         }
 
