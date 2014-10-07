@@ -41,7 +41,7 @@ namespace spiky
 
         private void colorButton_Click(object sender, EventArgs e)
         {
-                new characterWindow().ShowDialog();
+                new ColorWindow().ShowDialog();
         }
 
         private void spikyStartUp_Load(object sender, EventArgs e)

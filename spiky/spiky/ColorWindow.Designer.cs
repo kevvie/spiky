@@ -1,6 +1,6 @@
 ﻿namespace spiky
 {
-    partial class characterWindow
+    partial class ColorWindow
     {
         /// <summary>
         /// Required designer variable.

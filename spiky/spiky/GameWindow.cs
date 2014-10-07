@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace spiky
 {
-    public partial class characterWindow : Form
+    public partial class GameWindow : Form
     {
-        public characterWindow()
+        public GameWindow()
         {
             InitializeComponent();
         }
