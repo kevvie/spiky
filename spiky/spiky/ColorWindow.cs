@@ -16,5 +16,17 @@ namespace spiky
         {
             InitializeComponent();
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new spikyStartUp().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new spikyStartUp().ShowDialog();
+        }
     }
 }
