@@ -23,10 +23,45 @@ namespace spiky
             new spikyStartUp().ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             new spikyStartUp().ShowDialog();
+        }
+
+        private void blackButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void whiteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redButton_Click(object sender, EventArgs e)
+        {
+                                                
+        }
+
+        private void blueButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yellowButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void greenButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orangeButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
