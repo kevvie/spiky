@@ -67,6 +67,9 @@
     <EmbeddedResource Include="ColorWindow.resx">
       <DependentUpon>ColorWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartWindow.resx">
       <DependentUpon>StartWindow.cs</DependentUpon>
     </EmbeddedResource>

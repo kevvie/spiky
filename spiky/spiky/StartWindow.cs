@@ -29,12 +29,11 @@ namespace spiky
 
         private void startButton_Click(object sender, EventArgs e)
         {
-
+            new GameWindow().ShowDialog();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
@@ -46,7 +45,6 @@ namespace spiky
 
         private void spikyStartUp_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
