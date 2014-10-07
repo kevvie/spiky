@@ -29,7 +29,8 @@ namespace spiky
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            new GameWindow().ShowDialog();
+            new GameWindow().Show();
+            this.Hide();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -39,9 +40,9 @@ namespace spiky
 
 
         private void colorButton_Click(object sender, EventArgs e)
-        {
-                this.Hide();
-                new ColorWindow().ShowDialog();
+        {   
+            new ColorWindow().Show();
+            this.Hide(); 
         }
 
         private void spikyStartUp_Load(object sender, EventArgs e)

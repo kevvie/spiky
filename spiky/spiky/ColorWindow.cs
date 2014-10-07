@@ -19,14 +19,14 @@ namespace spiky
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new spikyStartUp().ShowDialog();
+            new spikyStartUp().Show();
+            this.Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new spikyStartUp().ShowDialog();
+            new spikyStartUp().Show();
+            this.Close();
         }
 
         private void blackButton_Click(object sender, EventArgs e)
