@@ -27,20 +27,9 @@ namespace spiky
             InitializeComponent();
         }
 
-        private void multiPlayerButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void startButton_Click(object sender, EventArgs e)
         {
 
-        }
-        
-        private void muteButton_Click_1(object sender, EventArgs e)
-        {
-            SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle,
-                (IntPtr)APPCOMMAND_VOLUME_MUTE);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -49,17 +38,8 @@ namespace spiky
             Application.Exit();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void highScoreButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void characterButton_Click(object sender, EventArgs e)
+        private void colorButton_Click(object sender, EventArgs e)
         {
                 new characterWindow().ShowDialog();
         }
