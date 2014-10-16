@@ -36,7 +36,6 @@
             this.pictureBoxE1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxD1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxC1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxB1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxA1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxH8 = new System.Windows.Forms.PictureBox();
             this.pictureBoxG8 = new System.Windows.Forms.PictureBox();
@@ -128,6 +127,7 @@
             this.pictureBoxC9 = new System.Windows.Forms.PictureBox();
             this.pictureBoxB9 = new System.Windows.Forms.PictureBox();
             this.pictureBoxA9 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxB1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxH1)).BeginInit();
@@ -136,7 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxE1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxH8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxG8)).BeginInit();
@@ -228,6 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxD4
@@ -325,18 +325,6 @@
             this.pictureBoxC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxC1.TabIndex = 129;
             this.pictureBoxC1.TabStop = false;
-            // 
-            // pictureBoxB1
-            // 
-            this.pictureBoxB1.BackColor = System.Drawing.Color.White;
-            this.pictureBoxB1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxB1.Location = new System.Drawing.Point(232, 616);
-            this.pictureBoxB1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxB1.Name = "pictureBoxB1";
-            this.pictureBoxB1.Size = new System.Drawing.Size(66, 61);
-            this.pictureBoxB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxB1.TabIndex = 128;
-            this.pictureBoxB1.TabStop = false;
             // 
             // pictureBoxA1
             // 
@@ -1430,12 +1418,25 @@
             this.pictureBoxA9.TabIndex = 151;
             this.pictureBoxA9.TabStop = false;
             // 
+            // pictureBoxB1
+            // 
+            this.pictureBoxB1.BackColor = System.Drawing.Color.White;
+            this.pictureBoxB1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxB1.Location = new System.Drawing.Point(232, 616);
+            this.pictureBoxB1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxB1.Name = "pictureBoxB1";
+            this.pictureBoxB1.Size = new System.Drawing.Size(66, 61);
+            this.pictureBoxB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxB1.TabIndex = 171;
+            this.pictureBoxB1.TabStop = false;
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(864, 862);
+            this.Controls.Add(this.pictureBoxB1);
             this.Controls.Add(this.pictureBoxJ10);
             this.Controls.Add(this.pictureBoxI10);
             this.Controls.Add(this.pictureBoxJ9);
@@ -1480,7 +1481,6 @@
             this.Controls.Add(this.pictureBoxE1);
             this.Controls.Add(this.pictureBoxD1);
             this.Controls.Add(this.pictureBoxC1);
-            this.Controls.Add(this.pictureBoxB1);
             this.Controls.Add(this.pictureBoxA1);
             this.Controls.Add(this.pictureBoxH8);
             this.Controls.Add(this.pictureBoxG8);
@@ -1548,7 +1548,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxE1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxD1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxH8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxG8)).EndInit();
@@ -1640,6 +1639,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxC9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxA9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxB1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1654,7 +1654,6 @@
         internal System.Windows.Forms.PictureBox pictureBoxE1;
         internal System.Windows.Forms.PictureBox pictureBoxD1;
         internal System.Windows.Forms.PictureBox pictureBoxC1;
-        internal System.Windows.Forms.PictureBox pictureBoxB1;
         internal System.Windows.Forms.PictureBox pictureBoxA1;
         internal System.Windows.Forms.PictureBox pictureBoxH8;
         internal System.Windows.Forms.PictureBox pictureBoxG8;
@@ -1746,6 +1745,7 @@
         internal System.Windows.Forms.PictureBox pictureBoxC9;
         internal System.Windows.Forms.PictureBox pictureBoxB9;
         internal System.Windows.Forms.PictureBox pictureBoxA9;
+        internal System.Windows.Forms.PictureBox pictureBoxB1;
 
     }
 }
