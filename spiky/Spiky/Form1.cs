@@ -12,9 +12,17 @@ namespace Spiky
 {
     public partial class Form1 : Form
     {
+        private string sendText;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            sendText = inputTextBox.Text;
+            inputTextBox.Clear();
+            outputTextBox.AppendText("Me: " + sendText + "\n");
         }
     }
 }

@@ -1,1 +1,9 @@
 C:\Users\kevin\Desktop\spiky\Spiky\Spiky\bin\Debug\Spiky.exe.config
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\bin\Debug\Spiky.exe
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\bin\Debug\Spiky.pdb
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.csprojResolveAssemblyReference.cache
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.Form1.resources
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.Properties.Resources.resources
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.csproj.GenerateResource.Cache
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.exe
+C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.pdb
