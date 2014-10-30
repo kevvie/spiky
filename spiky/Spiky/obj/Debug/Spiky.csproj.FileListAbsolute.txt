@@ -7,3 +7,12 @@ C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.Properties.Resources.re
 C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.csproj.GenerateResource.Cache
 C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.exe
 C:\Users\kevin\Desktop\spiky\Spiky\Spiky\obj\Debug\Spiky.pdb
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\bin\Debug\Spiky.exe.config
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.exe
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.pdb
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\bin\Debug\Spiky.exe
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\bin\Debug\Spiky.pdb
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.csprojResolveAssemblyReference.cache
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.Form1.resources
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.Properties.Resources.resources
+D:\Avans\Jaar 2\Periode 1\Programmeren\Eindopdracht\spiky\Spiky\obj\Debug\Spiky.csproj.GenerateResource.Cache
