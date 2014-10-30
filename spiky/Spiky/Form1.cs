@@ -24,5 +24,10 @@ namespace Spiky
             inputTextBox.Clear();
             outputTextBox.AppendText("Me: " + sendText + "\n");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
