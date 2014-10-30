@@ -31,8 +31,8 @@
             this.sendButton = new System.Windows.Forms.Button();
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.inputTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.serverButton = new System.Windows.Forms.Button();
+            this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -68,23 +68,24 @@
             this.inputTextBox.Size = new System.Drawing.Size(837, 150);
             this.inputTextBox.TabIndex = 2;
             // 
-            // button1
+            // serverButton
             // 
-            this.button1.Location = new System.Drawing.Point(724, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 28);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "connect to server";
-            this.button1.UseVisualStyleBackColor = true;
+            this.serverButton.Location = new System.Drawing.Point(724, 14);
+            this.serverButton.Margin = new System.Windows.Forms.Padding(4);
+            this.serverButton.Name = "serverButton";
+            this.serverButton.Size = new System.Drawing.Size(213, 28);
+            this.serverButton.TabIndex = 3;
+            this.serverButton.Text = "connect to server";
+            this.serverButton.UseVisualStyleBackColor = true;
+            this.serverButton.Click += new System.EventHandler(this.serverButton_Click);
             // 
-            // textBox1
+            // serverNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(467, 22);
-            this.textBox1.TabIndex = 4;
+            this.serverNameTextBox.Location = new System.Drawing.Point(236, 17);
+            this.serverNameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.serverNameTextBox.Name = "serverNameTextBox";
+            this.serverNameTextBox.Size = new System.Drawing.Size(467, 22);
+            this.serverNameTextBox.TabIndex = 4;
             // 
             // label1
             // 
@@ -103,8 +104,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 727);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.serverNameTextBox);
+            this.Controls.Add(this.serverButton);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.sendButton);
@@ -122,8 +123,8 @@
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.TextBox inputTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button serverButton;
+        private System.Windows.Forms.TextBox serverNameTextBox;
         private System.Windows.Forms.Label label1;
     }
 }
