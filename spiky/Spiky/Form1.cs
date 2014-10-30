@@ -22,12 +22,12 @@ namespace Spiky
         {
             sendText = inputTextBox.Text;
             inputTextBox.Clear();
-            outputTextBox.AppendText("Me: " + sendText + "\n");
+            if (!String.IsNullOrEmpty(sendText))
+            {
+                outputTextBox.AppendText("Me: " + sendText + "\n");
+                outputTextBox.AppendText(" " + "\n");
+            }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

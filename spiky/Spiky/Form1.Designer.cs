@@ -45,11 +45,13 @@
             // 
             // outputTextBox
             // 
-            this.outputTextBox.Location = new System.Drawing.Point(13, 13);
+            this.outputTextBox.Location = new System.Drawing.Point(13, 12);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
-            this.outputTextBox.Size = new System.Drawing.Size(765, 430);
+            this.outputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.outputTextBox.Size = new System.Drawing.Size(765, 431);
             this.outputTextBox.TabIndex = 1;
             // 
             // inputTextBox
@@ -70,7 +72,6 @@
             this.Controls.Add(this.sendButton);
             this.Name = "Form1";
             this.Text = "Spiky Chat";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
