@@ -1,121 +1,94 @@
 ﻿using System;
-using System.Threading;
-using System.Net.Sockets;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.Collections;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Net;
+using System.Net.Sockets;
+using System.IO;
 
-namespace Spiky
+namespace Server
 {
-    class Server
+    class Program
     {
-        public static Hashtable clientsList = new Hashtable();
-
         static void Main(string[] args)
         {
-            TcpListener serverSocket = new TcpListener(8888);
-            TcpClient clientSocket = default(TcpClient);
-            int counter = 0;
+            IPAddress localhost; //= IPAddress.Parse("127.0.0.1");
 
-            serverSocket.Start();
-            Console.WriteLine("Chat Server Started ....");
-            counter = 0;
-            while ((true))
+            bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
+            if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
+
+            TcpListener listener = new System.Net.Sockets.TcpListener(localhost, 1330);
+            listener.Start();
+
+            while (true)
             {
-                counter += 1;
-                clientSocket = serverSocket.AcceptTcpClient();
+                Console.WriteLine("Waiting for connection");
 
-                byte[] bytesFrom = new byte[10025];
-                string dataFromClient = null;
+                TcpClient client = listener.AcceptTcpClient();
 
-                NetworkStream networkStream = clientSocket.GetStream();
-                networkStream.Read(bytesFrom, 0, (int)clientSocket.ReceiveBufferSize);
-                dataFromClient = System.Text.Encoding.ASCII.GetString(bytesFrom);
-                dataFromClient = dataFromClient.Substring(0, dataFromClient.IndexOf("$"));
-
-                clientsList.Add(dataFromClient, clientSocket);
-
-                broadcast(dataFromClient + " Joined ", dataFromClient, false);
-
-                Console.WriteLine(dataFromClient + " Joined chat room ");
-                handleClinet client = new handleClinet();
-                client.startClient(clientSocket, dataFromClient, clientsList);
+                Thread thread = new Thread(HandleClientThread);
+                thread.Start(client);
             }
 
-            clientSocket.Close();
-            serverSocket.Stop();
-            Console.WriteLine("exit");
-            Console.ReadLine();
         }
 
-        public static void broadcast(string msg, string uName, bool flag)
+        static void HandleClientThread(object obj)
         {
-            foreach (DictionaryEntry Item in clientsList)
+            TcpClient client = obj as TcpClient;
+
+            bool done = false;
+            while (!done)
             {
-                TcpClient broadcastSocket;
-                broadcastSocket = (TcpClient)Item.Value;
-                NetworkStream broadcastStream = broadcastSocket.GetStream();
-                Byte[] broadcastBytes = null;
+                string received = ReadTextMessage(client);
+                Console.WriteLine("Received: {0}", received);
+                done = received.Equals("bye");
+                if (done) WriteTextMessage(client, "BYE");
+                else WriteTextMessage(client, "OK");
 
-                if (flag == true)
-                {
-                    broadcastBytes = Encoding.ASCII.GetBytes(uName + " says : " + msg);
-                }
-                else
-                {
-                    broadcastBytes = Encoding.ASCII.GetBytes(msg);
-                }
-
-                broadcastStream.Write(broadcastBytes, 0, broadcastBytes.Length);
-                broadcastStream.Flush();
             }
-        }  //end broadcast function
-    }//end Main class
-
-
-    public class handleClinet
-    {
-        TcpClient clientSocket;
-        string clNo;
-        Hashtable clientsList;
-
-        public void startClient(TcpClient inClientSocket, string clineNo, Hashtable cList)
-        {
-            this.clientSocket = inClientSocket;
-            this.clNo = clineNo;
-            this.clientsList = cList;
-            Thread ctThread = new Thread(doChat);
-            ctThread.Start();
+            client.Close();
+            Console.WriteLine("Connection closed");
         }
 
-        private void doChat()
+        public static string ReadTextMessage(TcpClient client)
         {
-            int requestCount = 0;
-            byte[] bytesFrom = new byte[10025];
-            string dataFromClient = null;
-            Byte[] sendBytes = null;
-            string serverResponse = null;
-            string rCount = null;
-            requestCount = 0;
 
-            while ((true))
+            StreamReader stream = new StreamReader(client.GetStream(), Encoding.ASCII);
+            string line = stream.ReadLine();
+
+
+            return line;
+        }
+
+        public static void WriteTextMessage(TcpClient client, string message)
+        {
+            var stream = new StreamWriter(client.GetStream(), Encoding.ASCII);
+            stream.WriteLine(message);
+            stream.Flush();
+        }
+
+        public static string ReadMessage(TcpClient client)
+        {
+
+            byte[] buffer = new byte[256];
+            int totalRead = 0;
+
+            do
             {
-                try
-                {
-                    requestCount = requestCount + 1;
-                    NetworkStream networkStream = clientSocket.GetStream();
-                    networkStream.Read(bytesFrom, 0, (int)clientSocket.ReceiveBufferSize);
-                    dataFromClient = System.Text.Encoding.ASCII.GetString(bytesFrom);
-                    dataFromClient = dataFromClient.Substring(0, dataFromClient.IndexOf("$"));
-                    Console.WriteLine("From client - " + clNo + " : " + dataFromClient);
-                    rCount = Convert.ToString(requestCount);
+                int read = client.GetStream().Read(buffer, totalRead, buffer.Length - totalRead);
+                totalRead += read;
+                Console.WriteLine("ReadMessage: " + read);
+            } while (client.GetStream().DataAvailable);
 
-                    Server.broadcast(dataFromClient, clNo, true);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }//end while
-        }//end doChat
-    } //end class handleClinet
-}//end namespace
+            return Encoding.Unicode.GetString(buffer, 0, totalRead);
+        }
+
+        public static void SendMessage(TcpClient client, string message)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(message);
+            client.GetStream().Write(bytes, 0, bytes.Length);
+        }
+    }
+}

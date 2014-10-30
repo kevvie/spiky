@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spiky", "Spiky\Spiky.csproj", "{32754DF2-15FD-4AB3-9501-31337A8D9550}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{853D743C-3A47-4A94-AF05-62A7D03D7A55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{32754DF2-15FD-4AB3-9501-31337A8D9550}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32754DF2-15FD-4AB3-9501-31337A8D9550}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32754DF2-15FD-4AB3-9501-31337A8D9550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853D743C-3A47-4A94-AF05-62A7D03D7A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853D743C-3A47-4A94-AF05-62A7D03D7A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853D743C-3A47-4A94-AF05-62A7D03D7A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853D743C-3A47-4A94-AF05-62A7D03D7A55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
