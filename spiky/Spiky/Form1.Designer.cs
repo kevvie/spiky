@@ -38,10 +38,10 @@
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(527, 375);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendButton.Location = new System.Drawing.Point(862, 563);
+            this.sendButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(56, 123);
+            this.sendButton.Size = new System.Drawing.Size(75, 151);
             this.sendButton.TabIndex = 0;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
@@ -49,53 +49,48 @@
             // 
             // outputTextBox
             // 
-<<<<<<< HEAD
-            this.outputTextBox.Location = new System.Drawing.Point(10, 10);
-            this.outputTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-=======
-            this.outputTextBox.Location = new System.Drawing.Point(13, 60);
->>>>>>> c5f3550a73dc8632295c2b4a45fbcd962cbb2fa7
+            this.outputTextBox.Location = new System.Drawing.Point(17, 74);
+            this.outputTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
             this.outputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-<<<<<<< HEAD
-            this.outputTextBox.Size = new System.Drawing.Size(575, 351);
-=======
-            this.outputTextBox.Size = new System.Drawing.Size(765, 383);
->>>>>>> c5f3550a73dc8632295c2b4a45fbcd962cbb2fa7
+            this.outputTextBox.Size = new System.Drawing.Size(920, 470);
             this.outputTextBox.TabIndex = 1;
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(10, 376);
-            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inputTextBox.Location = new System.Drawing.Point(19, 563);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(514, 123);
+            this.inputTextBox.Size = new System.Drawing.Size(837, 150);
             this.inputTextBox.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(618, 14);
+            this.button1.Location = new System.Drawing.Point(724, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.Size = new System.Drawing.Size(213, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "connect to server";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 14);
+            this.textBox1.Location = new System.Drawing.Point(236, 17);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(435, 22);
+            this.textBox1.Size = new System.Drawing.Size(467, 22);
             this.textBox1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 17);
             this.label1.TabIndex = 5;
@@ -104,20 +99,16 @@
             // Form1
             // 
             this.AcceptButton = this.sendButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(598, 508);
-=======
-            this.ClientSize = new System.Drawing.Size(797, 625);
+            this.ClientSize = new System.Drawing.Size(960, 727);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
->>>>>>> c5f3550a73dc8632295c2b4a45fbcd962cbb2fa7
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.sendButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Spiky Chat";
             this.Load += new System.EventHandler(this.Form1_Load);
