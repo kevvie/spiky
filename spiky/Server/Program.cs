@@ -3,11 +3,13 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace Server
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             IPAddress localhost; //= IPAddress.Parse("127.0.0.1");
@@ -41,6 +43,7 @@ namespace Server
             {
                 string received = ReadMessage(client);
                 Console.WriteLine("Received: {0}", received);
+
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
                 else SendResponse(client, "OK");

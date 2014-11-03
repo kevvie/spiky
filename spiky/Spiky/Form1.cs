@@ -13,11 +13,12 @@ namespace Spiky
     public partial class Form1 : Form
     {
         private string sendText;
+        private string clientName;
         private TcpClient client;
         public Form1()
         {
             InitializeComponent();
-            client = new TcpClient("127.0.0.1", 1330);
+            //client = new TcpClient("127.0.0.1", 1330);
 
         }
 
@@ -29,13 +30,21 @@ namespace Spiky
             {
                 outputTextBox.AppendText("Me: " + sendText + "\n");
                 outputTextBox.AppendText(" " + "\n");
+                SendMessage(client, clientName + sendText);
             }
-            SendMessage(client, sendText);
         }
 
         private void serverButton_Click(object sender, EventArgs e)
         {
-            
+            clientName = serverNameTextBox.Text;
+            if (!String.IsNullOrEmpty(clientName))
+            {
+                client = new TcpClient("127.0.0.1", 1330);
+                outputTextBox.AppendText("You are now joining the chat" + "\n");
+                outputTextBox.AppendText(" " + "\n");
+                SendMessage(client, clientName + " has joined the chat");
+                clientName += ": ";
+            }
         }
         
 
