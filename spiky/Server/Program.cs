@@ -46,14 +46,16 @@ namespace Server
                 Console.WriteLine("Received: {0}", received);
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
-                //else SendResponse(client, received);
-
-                foreach(TcpClient name in clients)
+                else
                 {
-                    SendResponse(name, received);
+                    foreach (TcpClient name in clients)
+                    {
+                        SendResponse(name, received);
+                    }
                 }
                 
             }
+            clients.Remove(client);
             client.Close();
             Console.WriteLine("Connection closed");
         }

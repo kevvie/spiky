@@ -17,7 +17,7 @@ namespace Spiky
         private string clientName;
         private TcpClient client;
 
-        System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
+        TcpClient clientSocket = new System.Net.Sockets.TcpClient();
         NetworkStream serverStream = default(NetworkStream);
         string readData = null;
 
@@ -55,7 +55,6 @@ namespace Spiky
                 outputTextBox.AppendText("You are now joining the chat" + "\n");
                 outputTextBox.AppendText(" " + "\n");
                 SendMessage(client, clientName + " has joined the chat");
-                //clientName += ": ";
                 sendButton.BackColor = Control.DefaultBackColor;
                 inputTextBox.BackColor = Control.DefaultBackColor;
                 inputTextBox.ReadOnly = false;
