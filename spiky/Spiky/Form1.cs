@@ -95,7 +95,7 @@ namespace Spiky
             
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog1.FileName, outputTextBox.Text);
+                File.WriteAllLines(saveFileDialog1.FileName, outputTextBox.Lines);
             }
         }        
 
