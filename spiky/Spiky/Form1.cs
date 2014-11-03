@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Spiky
 {
@@ -13,6 +14,8 @@ namespace Spiky
         private string sendText;
         private string clientName;
         private TcpClient client;
+
+        int line = 0;
 
 
         public static string ServerIP = "127.0.0.1";
@@ -162,5 +165,11 @@ namespace Spiky
                 outputTextBox.Lines = File.ReadAllLines(openFileDialog1.FileName);
             }
         }
+
+        private void outputTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
+        }
+
     }
 }

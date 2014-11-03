@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.sendButton = new System.Windows.Forms.Button();
-            this.outputTextBox = new System.Windows.Forms.TextBox();
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.serverButton = new System.Windows.Forms.Button();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
@@ -39,6 +38,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveConversationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outputTextBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,18 +53,6 @@
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
-            // outputTextBox
-            // 
-            this.outputTextBox.Location = new System.Drawing.Point(17, 101);
-            this.outputTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.outputTextBox.Multiline = true;
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.ReadOnly = true;
-            this.outputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.Size = new System.Drawing.Size(920, 443);
-            this.outputTextBox.TabIndex = 1;
-            // 
             // inputTextBox
             // 
             this.inputTextBox.Location = new System.Drawing.Point(19, 562);
@@ -77,7 +65,7 @@
             // serverButton
             // 
             this.serverButton.Location = new System.Drawing.Point(723, 38);
-            this.serverButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serverButton.Margin = new System.Windows.Forms.Padding(4);
             this.serverButton.Name = "serverButton";
             this.serverButton.Size = new System.Drawing.Size(213, 28);
             this.serverButton.TabIndex = 3;
@@ -88,7 +76,7 @@
             // serverNameTextBox
             // 
             this.serverNameTextBox.Location = new System.Drawing.Point(233, 38);
-            this.serverNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serverNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.serverNameTextBox.Name = "serverNameTextBox";
             this.serverNameTextBox.Size = new System.Drawing.Size(467, 22);
             this.serverNameTextBox.TabIndex = 4;
@@ -108,7 +96,7 @@
             this.disconnectButton.Location = new System.Drawing.Point(723, 73);
             this.disconnectButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.disconnectButton.Name = "disconnectButton";
-            this.disconnectButton.Size = new System.Drawing.Size(213, 23);
+            this.disconnectButton.Size = new System.Drawing.Size(213, 30);
             this.disconnectButton.TabIndex = 6;
             this.disconnectButton.Text = "disconnect from server";
             this.disconnectButton.UseVisualStyleBackColor = true;
@@ -137,16 +125,26 @@
             // saveConversationToolStripMenuItem
             // 
             this.saveConversationToolStripMenuItem.Name = "saveConversationToolStripMenuItem";
-            this.saveConversationToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.saveConversationToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.saveConversationToolStripMenuItem.Text = "Save chat";
             this.saveConversationToolStripMenuItem.Click += new System.EventHandler(this.saveChatToolStripMenuItem_Click);
             // 
             // openChatToolStripMenuItem
             // 
             this.openChatToolStripMenuItem.Name = "openChatToolStripMenuItem";
-            this.openChatToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.openChatToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.openChatToolStripMenuItem.Text = "Load old chat";
             this.openChatToolStripMenuItem.Click += new System.EventHandler(this.openChatToolStripMenuItem_Click);
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.Location = new System.Drawing.Point(12, 108);
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ReadOnly = true;
+            this.outputTextBox.Size = new System.Drawing.Size(924, 449);
+            this.outputTextBox.TabIndex = 8;
+            this.outputTextBox.Text = "";
+            this.outputTextBox.LinkClicked += (outputTextBox_LinkClicked);
             // 
             // Form1
             // 
@@ -154,12 +152,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 727);
+            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.disconnectButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.serverNameTextBox);
             this.Controls.Add(this.serverButton);
             this.Controls.Add(this.inputTextBox);
-            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -177,7 +175,6 @@
         #endregion
 
         private System.Windows.Forms.Button sendButton;
-        private System.Windows.Forms.TextBox outputTextBox;
         private System.Windows.Forms.TextBox inputTextBox;
         private System.Windows.Forms.Button serverButton;
         private System.Windows.Forms.TextBox serverNameTextBox;
@@ -187,6 +184,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveConversationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openChatToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox outputTextBox;
     }
 }
 
