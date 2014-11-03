@@ -17,13 +17,13 @@ namespace Server
         {
             IPAddress localhost;
 
-            var serverip = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(o => o.AddressFamily == AddressFamily.InterNetwork).ToString();
+            //var ServerIP = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(o => o.AddressFamily == AddressFamily.InterNetwork).ToString();
             Console.WriteLine("server adress is: " + ServerIP);            
 
             bool ipIsOk = IPAddress.TryParse(ServerIP, out localhost);
             if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
 
-            TcpListener listener = new System.Net.Sockets.TcpListener(localhost, Port);
+            TcpListener listener = new System.Net.Sockets.TcpListener(IPAddress.Parse(ServerIP), Port);
             listener.Start();
             
             while (true)
