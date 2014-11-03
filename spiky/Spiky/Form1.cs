@@ -16,10 +16,20 @@ namespace Spiky
         private string sendText;
         private string clientName;
         private TcpClient client;
+
+        System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
+        NetworkStream serverStream = default(NetworkStream);
+        string readData = null;
+
+
         public Form1()
         {
             InitializeComponent();
             //client = new TcpClient("127.0.0.1", 1330);
+            sendButton.BackColor = Color.FromArgb(255, Color.Gray);
+            inputTextBox.BackColor = Color.FromArgb(255, Color.Gray);
+            inputTextBox.ReadOnly = true;
+            outputTextBox.AppendText("Choose your chat name");
 
         }
 
@@ -40,11 +50,19 @@ namespace Spiky
             clientName = serverNameTextBox.Text;
             if (!String.IsNullOrEmpty(clientName))
             {
+                outputTextBox.Clear();
                 client = new TcpClient("127.0.0.1", 1330);
                 outputTextBox.AppendText("You are now joining the chat" + "\n");
                 outputTextBox.AppendText(" " + "\n");
                 SendMessage(client, clientName + " has joined the chat");
                 clientName += ": ";
+                sendButton.BackColor = Control.DefaultBackColor;
+                inputTextBox.BackColor = Control.DefaultBackColor;
+                inputTextBox.ReadOnly = false;
+
+                Thread ctThread = new Thread(getMessage);
+                ctThread.Start();
+
             }
         }
         
@@ -83,7 +101,39 @@ namespace Spiky
             {
                 File.WriteAllLines(saveFileDialog1.FileName, outputTextBox.Lines);
             }
-        }        
+        }
+
+        private static string ReadResponse(TcpClient client)
+        {
+            byte[] buffer = new byte[256];
+            int totalRead = 0;
+            //read bytes until there are none left
+            do
+            {
+                int read = client.GetStream().Read(buffer, totalRead,
+                    buffer.Length - totalRead);
+                totalRead += read;
+            } while (client.GetStream().DataAvailable);
+            return Encoding.Unicode.GetString(buffer, 0, totalRead);
+        }
+
+        private void getMessage()
+        {
+            while (true)
+            {
+                // to do
+
+                //msg();
+            }
+        }
+
+        private void msg()
+        {
+            if (this.InvokeRequired)
+                this.Invoke(new MethodInvoker(msg));
+            else
+                outputTextBox.AppendText(readData + "\n");
+        } 
 
 
     }
