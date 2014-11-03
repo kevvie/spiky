@@ -64,6 +64,10 @@ namespace Spiky
                 ctThread.Start();
 
             }
+            else
+            {
+                MessageBox.Show("No chat name chosen!");
+            }
         }
         
 
