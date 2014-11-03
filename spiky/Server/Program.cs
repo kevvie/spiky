@@ -15,8 +15,12 @@ namespace Server
         {
             IPAddress localhost;
 
-            bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
+            string strHostName = System.Net.Dns.GetHostName();
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
+            IPAddress ipAddress = ipHostInfo.AddressList[0];   
+            
 
+            bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
             Console.WriteLine("server adress is: " + localhost);
             if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
 
