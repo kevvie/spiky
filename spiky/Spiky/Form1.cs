@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Spiky
 {
@@ -73,6 +74,20 @@ namespace Spiky
             sendButton.BackColor = Color.FromArgb(255, Color.Gray);
             inputTextBox.BackColor = Color.FromArgb(255, Color.Gray);
             inputTextBox.ReadOnly = true;
+        }
+
+        private void saveChatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog1.FileName, outputTextBox.Text);
+            }
         }        
 
 
