@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Spiky
 {
@@ -13,6 +14,12 @@ namespace Spiky
         private string sendText;
         private string clientName;
         private TcpClient client;
+
+        int line = 0;
+
+
+        public static string ServerIP = "127.0.0.1";
+        public static int ServerPort = 9001;
 
         TcpClient clientSocket = new System.Net.Sockets.TcpClient();
         NetworkStream serverStream = default(NetworkStream);
@@ -45,7 +52,7 @@ namespace Spiky
             if (!String.IsNullOrEmpty(clientName))
             {
                 outputTextBox.Clear();
-                client = new TcpClient("127.0.0.1", 1330);
+                client = new TcpClient(ServerIP, ServerPort);
                 outputTextBox.AppendText("You are now joining the chat" + "\n");
                 outputTextBox.AppendText(" " + "\n");
                 SendMessage(client, clientName + " has joined the chat");
@@ -75,8 +82,8 @@ namespace Spiky
 
         private void disconnectButton_Click(object sender, EventArgs e)
         {
-            byte[] bytes = Encoding.Unicode.GetBytes("qwertyuiop");
-            client.GetStream().Write(bytes, 0, bytes.Length);
+            SendMessage(client, "qwertyuiop");
+            outputTextBox.Clear();
             outputTextBox.AppendText("you are now disconnected from the server " + "\n");
             sendButton.BackColor = Color.FromArgb(255, Color.Gray);
             inputTextBox.BackColor = Color.FromArgb(255, Color.Gray);
@@ -90,7 +97,7 @@ namespace Spiky
             saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
-            
+
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllLines(saveFileDialog1.FileName, outputTextBox.Lines);
@@ -116,7 +123,7 @@ namespace Spiky
             while (true)
             {
                 readData = ReadResponse(client);
-                msg(); 
+                msg();
             }
         }
 
@@ -153,6 +160,24 @@ namespace Spiky
             {
                 outputTextBox.Lines = File.ReadAllLines(openFileDialog1.FileName);
             }
-        } 
+        }
+
+        private void outputTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(e.LinkText);
+        }
+
+    }
+    public static class RichTextBoxExtensions
+    {
+        public static void AppendText(this RichTextBox box, string text, Color color)
+        {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
+        }
     }
 }

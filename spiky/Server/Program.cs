@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Server
 {
@@ -13,7 +14,8 @@ namespace Server
         private static List<TcpClient> clients = new List<TcpClient>();
         static void Main(string[] args)
         {
-            IPAddress localhost;
+            var serverip = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(o => o.AddressFamily == AddressFamily.InterNetwork).ToString();
+            Console.WriteLine("server adress is: " + ServerIP);            
 
             bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
             if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
