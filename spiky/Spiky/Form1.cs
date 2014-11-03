@@ -14,6 +14,10 @@ namespace Spiky
         private string clientName;
         private TcpClient client;
 
+
+        public static string ServerIP = "127.0.0.1";
+        public static int ServerPort = 9001;
+
         TcpClient clientSocket = new System.Net.Sockets.TcpClient();
         NetworkStream serverStream = default(NetworkStream);
         string readData = null;
@@ -45,7 +49,7 @@ namespace Spiky
             if (!String.IsNullOrEmpty(clientName))
             {
                 outputTextBox.Clear();
-                client = new TcpClient("127.0.0.1", 1330);
+                client = new TcpClient(ServerIP, ServerPort);
                 outputTextBox.AppendText("You are now joining the chat" + "\n");
                 outputTextBox.AppendText(" " + "\n");
                 SendMessage(client, clientName + " has joined the chat");
@@ -90,7 +94,7 @@ namespace Spiky
             saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
-            
+
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllLines(saveFileDialog1.FileName, outputTextBox.Lines);
@@ -116,7 +120,7 @@ namespace Spiky
             while (true)
             {
                 readData = ReadResponse(client);
-                msg(); 
+                msg();
             }
         }
 
@@ -157,6 +161,6 @@ namespace Spiky
             {
                 outputTextBox.Lines = File.ReadAllLines(openFileDialog1.FileName);
             }
-        } 
+        }
     }
 }

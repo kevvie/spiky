@@ -44,10 +44,10 @@
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(646, 457);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(2);
+            this.sendButton.Location = new System.Drawing.Point(861, 562);
+            this.sendButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(56, 123);
+            this.sendButton.Size = new System.Drawing.Size(75, 151);
             this.sendButton.TabIndex = 0;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
@@ -55,30 +55,31 @@
             // 
             // outputTextBox
             // 
-            this.outputTextBox.Location = new System.Drawing.Point(13, 82);
-            this.outputTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.outputTextBox.Location = new System.Drawing.Point(17, 101);
+            this.outputTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
             this.outputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.Size = new System.Drawing.Size(691, 361);
+            this.outputTextBox.Size = new System.Drawing.Size(920, 443);
             this.outputTextBox.TabIndex = 1;
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(14, 457);
-            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.inputTextBox.Location = new System.Drawing.Point(19, 562);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(629, 123);
+            this.inputTextBox.Size = new System.Drawing.Size(837, 150);
             this.inputTextBox.TabIndex = 2;
             // 
             // serverButton
             // 
-            this.serverButton.Location = new System.Drawing.Point(542, 31);
+            this.serverButton.Location = new System.Drawing.Point(723, 38);
+            this.serverButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serverButton.Name = "serverButton";
-            this.serverButton.Size = new System.Drawing.Size(160, 23);
+            this.serverButton.Size = new System.Drawing.Size(213, 28);
             this.serverButton.TabIndex = 3;
             this.serverButton.Text = "connect to server";
             this.serverButton.UseVisualStyleBackColor = true;
@@ -86,26 +87,28 @@
             // 
             // serverNameTextBox
             // 
-            this.serverNameTextBox.Location = new System.Drawing.Point(175, 31);
+            this.serverNameTextBox.Location = new System.Drawing.Point(233, 38);
+            this.serverNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serverNameTextBox.Name = "serverNameTextBox";
-            this.serverNameTextBox.Size = new System.Drawing.Size(351, 20);
+            this.serverNameTextBox.Size = new System.Drawing.Size(467, 22);
             this.serverNameTextBox.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 34);
+            this.label1.Location = new System.Drawing.Point(16, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.Size = new System.Drawing.Size(158, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Choose your chat name";
             // 
             // disconnectButton
             // 
-            this.disconnectButton.Location = new System.Drawing.Point(542, 59);
-            this.disconnectButton.Margin = new System.Windows.Forms.Padding(2);
+            this.disconnectButton.Location = new System.Drawing.Point(723, 73);
+            this.disconnectButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.disconnectButton.Name = "disconnectButton";
-            this.disconnectButton.Size = new System.Drawing.Size(160, 19);
+            this.disconnectButton.Size = new System.Drawing.Size(213, 23);
             this.disconnectButton.TabIndex = 6;
             this.disconnectButton.Text = "disconnect from server";
             this.disconnectButton.UseVisualStyleBackColor = true;
@@ -117,7 +120,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(960, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,29 +131,29 @@
             this.saveConversationToolStripMenuItem,
             this.openChatToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.fileToolStripMenuItem.Text = "Chat";
             // 
             // saveConversationToolStripMenuItem
             // 
             this.saveConversationToolStripMenuItem.Name = "saveConversationToolStripMenuItem";
-            this.saveConversationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveConversationToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.saveConversationToolStripMenuItem.Text = "Save chat";
             this.saveConversationToolStripMenuItem.Click += new System.EventHandler(this.saveChatToolStripMenuItem_Click);
             // 
             // openChatToolStripMenuItem
             // 
             this.openChatToolStripMenuItem.Name = "openChatToolStripMenuItem";
-            this.openChatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openChatToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.openChatToolStripMenuItem.Text = "Load old chat";
             this.openChatToolStripMenuItem.Click += new System.EventHandler(this.openChatToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AcceptButton = this.sendButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 591);
+            this.ClientSize = new System.Drawing.Size(960, 727);
             this.Controls.Add(this.disconnectButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.serverNameTextBox);
@@ -159,7 +163,7 @@
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Spiky Chat";
             this.Load += new System.EventHandler(this.Form1_Load);

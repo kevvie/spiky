@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Server
 {
@@ -11,20 +12,16 @@ namespace Server
     {
 
         private static List<TcpClient> clients = new List<TcpClient>();
+
+        public static string ServerIP = "127.0.0.1";
+        public static int ServerPort = 9001;
+
         static void Main(string[] args)
         {
-            IPAddress localhost;
+            var serverip = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(o => o.AddressFamily == AddressFamily.InterNetwork).ToString();
+            Console.WriteLine("server adress is: " + ServerIP);            
 
-            string strHostName = System.Net.Dns.GetHostName();
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
-            IPAddress ipAddress = ipHostInfo.AddressList[0];   
-            
-
-            bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
-            Console.WriteLine("server adress is: " + localhost);
-            if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
-
-            TcpListener listener = new System.Net.Sockets.TcpListener(localhost, 1330);
+            TcpListener listener = new System.Net.Sockets.TcpListener(IPAddress.Parse(ServerIP), ServerPort);
             listener.Start();
             
             while (true)
