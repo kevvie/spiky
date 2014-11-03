@@ -125,9 +125,8 @@ namespace Spiky
         {
             while (true)
             {
-                // to do
-
-                //msg();
+                readData = ReadResponse(client);
+                msg(); 
             }
         }
 

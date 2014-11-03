@@ -9,6 +9,7 @@ namespace Server
 {
     class Program
     {
+        private static List<TcpClient> clients = new List<TcpClient>();
 
         static void Main(string[] args)
         {
@@ -26,6 +27,7 @@ namespace Server
                 Console.WriteLine("Waiting for connection");
                 //AcceptTcpClient waits for a connection from the client
                 TcpClient client = listener.AcceptTcpClient();
+                clients.Add(client);
                 //start a new thread to handle this connection so we can go back 
                 //to waiting for another client
                 Thread thread = new Thread(HandleClientThread);
@@ -45,7 +47,12 @@ namespace Server
                 Console.WriteLine("Received: {0}", received);
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
-                else SendResponse(client, "OK");                
+                else SendResponse(client, received);
+
+                foreach (TcpClient aclient in clients)
+                {
+                    Console.WriteLine(aclient);
+                }
             }
 
             client.Close();
