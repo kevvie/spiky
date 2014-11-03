@@ -75,8 +75,8 @@ namespace Spiky
 
         private void disconnectButton_Click(object sender, EventArgs e)
         {
-            byte[] bytes = Encoding.Unicode.GetBytes("qwertyuiop");
-            client.GetStream().Write(bytes, 0, bytes.Length);
+            SendMessage(client, "qwertyuiop");
+            outputTextBox.Clear();
             outputTextBox.AppendText("you are now disconnected from the server " + "\n");
             sendButton.BackColor = Color.FromArgb(255, Color.Gray);
             inputTextBox.BackColor = Color.FromArgb(255, Color.Gray);
@@ -126,17 +126,20 @@ namespace Spiky
                 this.Invoke(new MethodInvoker(msg));
             else
             {
-                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (!readData.Contains(": @")))
+                if (client.Available > 0)
                 {
-                    outputTextBox.AppendText(readData + "\n");
-                    outputTextBox.AppendText("\n");
-                }
-                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (readData.Contains(": @")))
-                {
-                    if (readData.Contains(": @" + clientName))
+                    if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (!readData.Contains(": @")))
                     {
                         outputTextBox.AppendText(readData + "\n");
                         outputTextBox.AppendText("\n");
+                    }
+                    if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (readData.Contains(": @")))
+                    {
+                        if (readData.Contains(": @" + clientName))
+                        {
+                            outputTextBox.AppendText(readData + "\n");
+                            outputTextBox.AppendText("\n");
+                        }
                     }
                 }
             }
