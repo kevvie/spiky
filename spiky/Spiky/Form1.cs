@@ -144,7 +144,7 @@ namespace Spiky
                     {
                         if (readData.Contains(": @" + clientName))
                         {
-                            outputTextBox.AppendText(readData + "\n");
+                            outputTextBox.AppendText(readData + "\n", Color.Green);
                             outputTextBox.AppendText("\n");
                         }
                     }
@@ -171,5 +171,17 @@ namespace Spiky
             Process.Start(e.LinkText);
         }
 
+    }
+    public static class RichTextBoxExtensions
+    {
+        public static void AppendText(this RichTextBox box, string text, Color color)
+        {
+            box.SelectionStart = box.TextLength;
+            box.SelectionLength = 0;
+
+            box.SelectionColor = color;
+            box.AppendText(text);
+            box.SelectionColor = box.ForeColor;
+        }
     }
 }
