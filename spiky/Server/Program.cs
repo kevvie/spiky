@@ -44,7 +44,7 @@ namespace Server
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
                 else SendResponse(client, "OK");
-
+                
             }
 
             client.Close();
