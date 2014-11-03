@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
@@ -10,17 +10,20 @@ namespace Server
 {
     class Program
     {
-
+        private static string ServerIP = "127.0.0.1";
+        private static int Port = 9001;
         private static List<TcpClient> clients = new List<TcpClient>();
         static void Main(string[] args)
         {
+            IPAddress localhost;
+
             var serverip = Dns.GetHostEntry(Dns.GetHostName()).AddressList.First(o => o.AddressFamily == AddressFamily.InterNetwork).ToString();
             Console.WriteLine("server adress is: " + ServerIP);            
 
-            bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
+            bool ipIsOk = IPAddress.TryParse(ServerIP, out localhost);
             if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
 
-            TcpListener listener = new System.Net.Sockets.TcpListener(localhost, 1330);
+            TcpListener listener = new System.Net.Sockets.TcpListener(localhost, Port);
             listener.Start();
             
             while (true)
