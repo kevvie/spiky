@@ -41,7 +41,7 @@ namespace Spiky
             {
                 outputTextBox.AppendText("Me: " + sendText + "\n");
                 outputTextBox.AppendText(" " + "\n");
-                SendMessage(client, clientName + sendText);
+                SendMessage(client, clientName + ": " + sendText);
             }
         }
 
@@ -55,7 +55,7 @@ namespace Spiky
                 outputTextBox.AppendText("You are now joining the chat" + "\n");
                 outputTextBox.AppendText(" " + "\n");
                 SendMessage(client, clientName + " has joined the chat");
-                clientName += ": ";
+                //clientName += ": ";
                 sendButton.BackColor = Control.DefaultBackColor;
                 inputTextBox.BackColor = Control.DefaultBackColor;
                 inputTextBox.ReadOnly = false;
@@ -135,7 +135,22 @@ namespace Spiky
             if (this.InvokeRequired)
                 this.Invoke(new MethodInvoker(msg));
             else
-                outputTextBox.AppendText(readData + "\n");
+            {
+                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (!readData.Contains("@")))
+                {
+                    outputTextBox.AppendText(readData + "\n");
+                    outputTextBox.AppendText("\n");
+                }
+                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (readData.Contains("@")))
+                {
+                    if (readData.Contains("@" + clientName))
+                    {
+                        outputTextBox.AppendText(readData + "\n");
+                        outputTextBox.AppendText("\n");
+                    }
+                }
+
+            }
         } 
 
 

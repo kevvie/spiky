@@ -9,8 +9,8 @@ namespace Server
 {
     class Program
     {
-        private static List<TcpClient> clients = new List<TcpClient>();
 
+        private static List<TcpClient> clients = new List<TcpClient>();
         static void Main(string[] args)
         {
             IPAddress localhost; //= IPAddress.Parse("127.0.0.1");
@@ -18,22 +18,21 @@ namespace Server
             bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);
             if (!ipIsOk) { Console.WriteLine("ip adres kan niet geparsed worden."); Environment.Exit(1); }
 
+
             TcpListener listener = new System.Net.Sockets.TcpListener(localhost, 1330);
             listener.Start();
-
             
             while (true)
             {
                 Console.WriteLine("Waiting for connection");
                 //AcceptTcpClient waits for a connection from the client
                 TcpClient client = listener.AcceptTcpClient();
-                clients.Add(client);
                 //start a new thread to handle this connection so we can go back 
                 //to waiting for another client
+                clients.Add(client);
                 Thread thread = new Thread(HandleClientThread);
                 thread.Start(client);
             }
-
         }
 
         static void HandleClientThread(object obj)
@@ -47,14 +46,14 @@ namespace Server
                 Console.WriteLine("Received: {0}", received);
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
-                else SendResponse(client, received);
+                //else SendResponse(client, received);
 
-                foreach (TcpClient aclient in clients)
+                foreach(TcpClient name in clients)
                 {
-                    Console.WriteLine(aclient);
+                    SendResponse(name, received);
                 }
+                
             }
-
             client.Close();
             Console.WriteLine("Connection closed");
         }
