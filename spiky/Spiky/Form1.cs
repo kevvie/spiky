@@ -63,6 +63,16 @@ namespace Spiky
                 totalRead += read;
             } while (client.GetStream().DataAvailable);
             return Encoding.Unicode.GetString(buffer, 0, totalRead);
+        }
+
+        private void disconnectButton_Click(object sender, EventArgs e)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes("qwertyuiop");
+            client.GetStream().Write(bytes, 0, bytes.Length);
+            outputTextBox.AppendText("you are now disconnected from the server " + "\n");
+            sendButton.BackColor = Color.FromArgb(255, Color.Gray);
+            inputTextBox.BackColor = Color.FromArgb(255, Color.Gray);
+            inputTextBox.ReadOnly = true;
         }        
 
 

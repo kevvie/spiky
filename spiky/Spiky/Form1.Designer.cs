@@ -34,6 +34,7 @@
             this.serverButton = new System.Windows.Forms.Button();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.disconnectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sendButton
@@ -97,12 +98,23 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Choose your chat name";
             // 
+            // disconnectButton
+            // 
+            this.disconnectButton.Location = new System.Drawing.Point(724, 46);
+            this.disconnectButton.Name = "disconnectButton";
+            this.disconnectButton.Size = new System.Drawing.Size(213, 23);
+            this.disconnectButton.TabIndex = 6;
+            this.disconnectButton.Text = "disconnect from server";
+            this.disconnectButton.UseVisualStyleBackColor = true;
+            this.disconnectButton.Click += new System.EventHandler(this.disconnectButton_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.sendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 727);
+            this.Controls.Add(this.disconnectButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.serverNameTextBox);
             this.Controls.Add(this.serverButton);
@@ -126,6 +138,7 @@
         private System.Windows.Forms.Button serverButton;
         private System.Windows.Forms.TextBox serverNameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button disconnectButton;
     }
 }
 
