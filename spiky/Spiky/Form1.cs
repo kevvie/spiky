@@ -46,6 +46,10 @@ namespace Spiky
                 SendMessage(client, clientName + " has joined the chat");
                 clientName += ": ";
             }
+            else
+            {
+                MessageBox.Show("No chat name chosen!");
+            }
         }
         
 
