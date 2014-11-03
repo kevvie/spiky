@@ -38,13 +38,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveConversationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sendButton
             // 
             this.sendButton.Location = new System.Drawing.Point(646, 457);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendButton.Margin = new System.Windows.Forms.Padding(2);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(56, 123);
             this.sendButton.TabIndex = 0;
@@ -55,7 +56,7 @@
             // outputTextBox
             // 
             this.outputTextBox.Location = new System.Drawing.Point(13, 82);
-            this.outputTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.outputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ReadOnly = true;
@@ -67,7 +68,7 @@
             // inputTextBox
             // 
             this.inputTextBox.Location = new System.Drawing.Point(14, 457);
-            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(629, 123);
@@ -102,7 +103,7 @@
             // disconnectButton
             // 
             this.disconnectButton.Location = new System.Drawing.Point(542, 59);
-            this.disconnectButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.disconnectButton.Margin = new System.Windows.Forms.Padding(2);
             this.disconnectButton.Name = "disconnectButton";
             this.disconnectButton.Size = new System.Drawing.Size(160, 19);
             this.disconnectButton.TabIndex = 6;
@@ -123,7 +124,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveConversationToolStripMenuItem});
+            this.saveConversationToolStripMenuItem,
+            this.openChatToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.fileToolStripMenuItem.Text = "Chat";
@@ -134,6 +136,13 @@
             this.saveConversationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveConversationToolStripMenuItem.Text = "Save chat";
             this.saveConversationToolStripMenuItem.Click += new System.EventHandler(this.saveChatToolStripMenuItem_Click);
+            // 
+            // openChatToolStripMenuItem
+            // 
+            this.openChatToolStripMenuItem.Name = "openChatToolStripMenuItem";
+            this.openChatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openChatToolStripMenuItem.Text = "Load old chat";
+            this.openChatToolStripMenuItem.Click += new System.EventHandler(this.openChatToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -150,7 +159,7 @@
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Spiky Chat";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -173,6 +182,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveConversationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openChatToolStripMenuItem;
     }
 }
 

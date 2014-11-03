@@ -140,6 +140,20 @@ namespace Spiky
                     }
                 }
             }
+        }
+
+        private void openChatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                outputTextBox.Lines = File.ReadAllLines(openFileDialog1.FileName);
+            }
         } 
     }
 }
