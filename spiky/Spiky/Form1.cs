@@ -61,20 +61,6 @@ namespace Spiky
             client.GetStream().Write(bytes, 0, bytes.Length);
         }
 
-        private static string ReadResponse(TcpClient client)
-        {
-            byte[] buffer = new byte[256];
-            int totalRead = 0;
-            //read bytes until there are none left
-            do
-            {
-                int read = client.GetStream().Read(buffer, totalRead,
-                    buffer.Length - totalRead);
-                totalRead += read;
-            } while (client.GetStream().DataAvailable);
-            return Encoding.Unicode.GetString(buffer, 0, totalRead);
-        }
-
         private void disconnectButton_Click(object sender, EventArgs e)
         {
             byte[] bytes = Encoding.Unicode.GetBytes("qwertyuiop");

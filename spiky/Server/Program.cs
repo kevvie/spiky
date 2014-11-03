@@ -43,7 +43,6 @@ namespace Server
             {
                 string received = ReadMessage(client);
                 Console.WriteLine("Received: {0}", received);
-
                 done = received.Equals("qwertyuiop");
                 if (done) SendResponse(client, "BYE");
                 else SendResponse(client, "OK");
@@ -68,7 +67,7 @@ namespace Server
 
             return Encoding.Unicode.GetString(buffer, 0, totalRead);
 
-        }
+        }       
 
         private static void SendResponse(TcpClient client, string message)
         {
