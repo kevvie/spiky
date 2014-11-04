@@ -133,13 +133,13 @@ namespace Spiky
                 this.Invoke(new MethodInvoker(msg));
             else
             {
-                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (!readData.Contains(": @")))
+                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (!readData.Contains(" @")))
                 {
                     outputTextBox.AppendText(readData + "\n");
                     outputTextBox.AppendText("\n");
                 }
-                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (readData.Contains(": @"))){
-                    if (readData.Contains(": @" + clientName))
+                if ((readData != clientName + ": " + sendText) && (readData != clientName + " has joined the chat") && (readData.Contains(" @"))){
+                    if (readData.Contains(" @" + clientName))
                     {
                         outputTextBox.AppendText(readData + "\n");
                         outputTextBox.AppendText("\n");
